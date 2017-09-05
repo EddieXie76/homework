@@ -14,12 +14,12 @@ public class Base16Test {
     }
 
     @Test
-    public void decode() throws Exception {
+    public void decoding() throws Exception {
         Assert.assertEquals("Test测试", Base16.decode("455637476E5BB88EFA59"));
     }
 
     @Test
-    public void encodeBenchmark() throws Exception {
+    public void encodingBenchmark() throws Exception {
         long begin = System.currentTimeMillis();
 
         byte[] input = "Test测试".getBytes("utf-8");
@@ -31,7 +31,7 @@ public class Base16Test {
     }
 
     @Test
-    public void decodeBenchmark() throws Exception {
+    public void decodingBenchmark() throws Exception {
         long begin = System.currentTimeMillis();
 
         IntStream.range(0, Constants.BENCHMARK_TIMES).forEach(value -> Base16.decode("455637476E5BB88EFA59"));
