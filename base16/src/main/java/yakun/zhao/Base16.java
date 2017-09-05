@@ -1,7 +1,7 @@
 package yakun.zhao;
 
 public class Base16 {
-    public static String encoding(byte[] bs) {
+    public static String encode(byte[] bs) {
         StringBuilder sb = new StringBuilder();
         for (byte b : bs) {
             int s1 = (b & 0xF);
@@ -11,7 +11,7 @@ public class Base16 {
         return sb.toString().toUpperCase();
     }
 
-    public static String decoding(String encode) {
+    public static String decode(String encode) {
         byte[] bs = new byte[encode.length() / 2];
         int tmp = 0;
         for (int i = 0; i < encode.length(); i += 2) {

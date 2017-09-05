@@ -17,7 +17,7 @@ public class Base16 {
         return table;
     }
 
-    public static String encoding(byte[] input) {
+    public static String encode(byte[] input) {
         StringBuilder sb = new StringBuilder(input.length*2);
         for (byte b : input) {
             int high = (b & 0b11110000) >> 4;
@@ -28,7 +28,7 @@ public class Base16 {
     }
 
 
-    public static byte[] decoding(String input) {
+    public static byte[] decode(String input) {
         byte[] result = new byte[input.length() / 2];
         IntStream.range(0, input.length()/2).forEach(index -> {
             int low = input.charAt(index*2);
