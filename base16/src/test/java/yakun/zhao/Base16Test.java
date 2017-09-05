@@ -1,10 +1,12 @@
-package eddie.xie.base16;
+package yakun.zhao;
 
 import common.Constants;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.stream.IntStream;
+
+import static org.junit.Assert.*;
 
 public class Base16Test {
     @Test
@@ -15,8 +17,7 @@ public class Base16Test {
 
     @Test
     public void decoding() throws Exception {
-        Assert.assertArrayEquals("Test测试".getBytes("utf-8"), Base16.decoding("455637476E5BB88EFA59"));
-        Assert.assertArrayEquals(new byte[]{0, 1, 2, 3, 4}, Base16.decoding("0010203040"));
+        Assert.assertEquals("Test测试", Base16.decoding("455637476E5BB88EFA59"));
     }
 
     @Test
