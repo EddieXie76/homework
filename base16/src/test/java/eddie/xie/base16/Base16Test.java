@@ -37,6 +37,5 @@ public class Base16Test {
 
         IntStream.range(0, Constants.BENCHMARK_TIMES).forEach(value -> Base16.decode("455637476E5BB88EFA59"));
         System.out.println("DecodingBenchmark=" + (System.currentTimeMillis() - begin));
-
     }
 }
